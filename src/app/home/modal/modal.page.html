@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Criar tarefa</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Fechar</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">Titulo </ion-label>
+        <ion-input name="titulo" [(ngModel)]="todo.titulo" type="text"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Descrição</ion-label>
+        <ion-textarea name="descricao" [(ngModel)]="todo.descricao"></ion-textarea>
+      </ion-item>
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="block" (click)="salvar()">Criar tarefa</ion-button>
+    </div>
+  </form>
+</ion-content>
